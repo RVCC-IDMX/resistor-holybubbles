@@ -11,9 +11,6 @@ const band1 = document.querySelector('#band1');
 const band2 = document.querySelector('#band2');
 const bandMultiplier = document.querySelector('#band-multiplier');
 const bandTolerance = document.querySelector('#band-tolerance');
-const updateBtn = document.querySelector("#update-btn");
-
-// updateBtn.addEventListener("click", updateResistor);
 
 band1.addEventListener("change", updateResistor);
 band2.addEventListener("change", updateResistor);
