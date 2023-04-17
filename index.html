@@ -63,11 +63,11 @@
       font-size: 1.125rem;
       align-self: center;
       margin: 0.5rem;
-      outline: 3px solid #222;
+      outline: 3px solid #333;
       text-align: center;
       width: 20rem;
       padding: 0.25rem;
-      background-color: #222;
+      background-color: #333;
       color: #fff;
     }
 
@@ -196,6 +196,18 @@
       margin-top: 1rem;
     }
 
+    select {
+      box-sizing: border-box;
+
+      width: 150px;
+      /* height: 40px; */
+      
+      padding: 4px 8px;
+
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
     @media screen and (min-width: 45rem) {
       .calculator {
         flex-direction: row;
@@ -215,75 +227,73 @@
   <h1>Resistor Calculator Ω</h1>
   <div class="calculator">
     <div class="selection">
-      <section class="container">
-        <h2>Band 1</h2>
-        <div id="color0" class="bands">
-          <div class="box black">black</div>
-          <div class="box brown">brown</div>
-          <div class="box red">red</div>
-          <div class="box orange">orange</div>
-          <div class="box yellow">yellow</div>
-          <div class="box green">green</div>
-          <div class="box blue">blue</div>
-          <div class="box violet">violet</div>
-          <div class="box grey">grey</div>
-          <div class="box white">white</div>
-        </div>
-      </section>
-      <section class="container">
-        <h2>Band 2</h2>
-        <div id="color1" class="bands">
-          <div class="box black">black</div>
-          <div class="box brown">brown</div>
-          <div class="box red">red</div>
-          <div class="box orange">orange</div>
-          <div class="box yellow">yellow</div>
-          <div class="box green">green</div>
-          <div class="box blue">blue</div>
-          <div class="box violet">violet</div>
-          <div class="box grey">grey</div>
-          <div class="box white">white</div>
-        </div>
-      </section>
-      <section class="container">
-        <h2>Multiplier</h2>
-        <div id="color2" class="bands">
-          <div class="box black">black</div>
-          <div class="box brown">brown</div>
-          <div class="box red">red</div>
-          <div class="box orange">orange</div>
-          <div class="box yellow">yellow</div>
-          <div class="box green">green</div>
-          <div class="box blue">blue</div>
-          <div class="box violet">violet</div>
-          <div class="box grey">grey</div>
-          <div class="box white">white</div>
-          <div class="box gold">gold</div>
-          <div class="box silver">silver</div>
-        </div>
-      </section>
-      <section class="container">
-        <h2>Tolerance</h2>
-        <div id="color3" class="bands">
-          <div class="box brown">brown</div>
-          <div class="box red">red</div>
-          <div class="box green">green</div>
-          <div class="box blue">blue</div>
-          <div class="box violet">violet</div>
-          <div class="box grey">grey</div>
-          <div class="box gold">gold</div>
-          <div class="box silver">silver</div>
-        </div>
-      </section>
+      <h2>Band 1</h2>
+      <select name="band1" id="band1">
+        <option value="black">Black</option>
+        <option value="brown">Brown</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="violet">Violet</option>
+        <option value="grey">Grey</option>
+        <option value="white">White</option>
+      </select>
+
+      <h2>Band 2</h2>
+      <select name="band2" id="band2">
+        <option value="black">Black</option>
+        <option value="brown">Brown</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="violet">Violet</option>
+        <option value="grey">Grey</option>
+        <option value="white">White</option>
+      </select>
+
+      <h2>Multiplier</h2>
+      <select name="band-multiplier" id="band-multiplier">
+        <option value="black">Black</option>
+        <option value="brown">Brown</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="violet">Violet</option>
+        <option value="grey">Grey</option>
+        <option value="white">White</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+      </select>
+
+      <h2>Tolerance</h2>
+      <select name="band-tolerance" id="band-tolerance">
+        <option value="brown">Brown</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="violet">Violet</option>
+        <option value="grey">Grey</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+      </select>
+
+      <button id="update-btn">Update</button>
     </div>
+
     <div class="lookup">
       <div class="resistor">
         <div class="wire wire--1"></div>
         <div class="ceramic">
-          <div id="b0" class="band red"></div>
-          <div id="b1" class="band green"></div>
-          <div id="b2" class="band violet"></div>
-          <div id="b3" class="band gold"></div>
+          <div id="b0" class="band"></div>
+          <div id="b1" class="band"></div>
+          <div id="b2" class="band"></div>
+          <div id="b3" class="band"></div>
         </div>
         <div class="wire wire--2"></div>
       </div>
